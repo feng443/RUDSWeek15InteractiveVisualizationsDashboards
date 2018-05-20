@@ -60,11 +60,9 @@ function buildPiePlot(sample, init) {
             //width: 500,
          }
 
-        //console.log(hoverText);
         if (init) {
             Plotly.newPlot('pie', pieData, layout);
         } else {
-            //console.log('restyle pie');
             Plotly.restyle('pie', 'values', [values]);
             Plotly.restyle('pie', 'labels', [labels]);
             Plotly.restyle('pie', 'hovertext', [hoverText]);
@@ -81,9 +79,7 @@ function optionChanged(sample) {
 }
 
 function buildBubblePlot(sample, init) {
-    //console.log(sample);
     url="/samples/" + sample;
-    //console.log(url);
 
     Plotly.d3.json(url, (error, data) => {
         if (error) return console.log(data);
@@ -126,7 +122,6 @@ function buildBubblePlot(sample, init) {
         if (init) {
             Plotly.newPlot('bubble', pieData, layout);
         } else {
-            //console.log('restyle pie');
             Plotly.restyle('bubble', 'x', [x]);
             Plotly.restyle('bubble', 'y', [y]);
             Plotly.restyle('bubble', 'hovertext', [hoverText]);
@@ -145,16 +140,12 @@ function buildMetadata(sample, init) {
 }
 
 function buildGaugePlot(sample, init) {
-    console.log('buildGaugePlot');
-    // Enter a speed between 0 and 180
     var level; //  = 175;
     url = 'wfreq/' + sample;
 
     Plotly.d3.json(url, (error, data) => {
         if (error) return console.log(data);
-        console.log('freq: ' + data);
         level = data;
-        console.log(level);
 
         // Trig to calc meter point
         const MAX = 9;
