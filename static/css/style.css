@@ -1,3 +1,48 @@
-.metadata-table {
-    border: 1px solid black;
+/*
+
+<Chan Feng> 2018-05-20 Rutgers Data Science - Interactive Visualizations and Dashboard
+
+*/
+
+#selSample {
+    padding: 20px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    margin: 20px;
+    background-color: #ddd;
+}
+
+.text-content {
+    background-color: #ddd;
+}
+
+
+#metadata-table {
+    border-style: solid;
+    border-width: 5px;
+    margin: 20px;
+
+}
+
+#gauge-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#metadata-header {
+    background-color: CornflowerBlue;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+#metadata {
+    padding: 15px;
+    border-style: solid;
+    border-color: CornflowerBlue;
+    border-width: 1px;
+    border-radius: 5px;
 }

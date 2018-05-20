@@ -1,4 +1,15 @@
+/*
 
+<Chan Feng> 2018-05-20 Rutgers Data Science - Interactive Visualizations and Dashboard
+
+
+TODO:
+
+1) Select box positions
+2) Metadata viz
+3) Grid lines in bubble chart
+
+*/
 url = '/names';
 Plotly.d3.json(url, (error, data) => {
    if (error) return console.log(data);
@@ -95,10 +106,18 @@ function buildBubblePlot(sample, init) {
 
          var layout = {
             margin: {
-                t: 20,
-                l: 20,
-                r: 20,
-                b: 20,
+                t: 0,
+                l: 50,
+                r: 50,
+                b: 0,
+            },
+            xaxis: {
+                showgrid: true,
+                gridwidth: 2,
+            },
+            yaxis: {
+                showgrid: true,
+                gridwidth: 2,
             },
             height: 400,
             hovermode: 'closest',
@@ -193,7 +212,10 @@ function buildGaugePlot(sample, init) {
                     color: '850000'
                 }
             }],
-            title: 'Gauge Speed 0-100',
+            title: 'Scrubs per week',
+            titlefont: {
+                size: 14,
+            },
             margin: {
                 t: 50,
                 l: 20,
@@ -205,13 +227,13 @@ function buildGaugePlot(sample, init) {
             xaxis: {
                 zeroline:false,
                 showticklabels:false,
-                showgrid: false,
                 range: [-1, 1]},
+                showgid: false,
             yaxis: {
                 zeroline:false,
                 showticklabels:false,
+                range: [-1, 1]},
                 showgrid: false,
-                range: [-1, 1]}
         };
 
         Plotly.newPlot('gauge', data, layout);

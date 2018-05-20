@@ -1,18 +1,23 @@
-# import necessary libraries
-import numpy as np
+"""
+
+<Chan Feng> 2018-05-20 Rutgers Data Science - Interactive Visualizations and Dashboard
+
+TODO:
+1) Remove hard coded SQL
+2) Figure out better ways to read into dataframe
+
+"""
+
 import pandas as pd
 from sqlalchemy.ext.automap import automap_base
-from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
-from sqlalchemy.sql import select
 
 from flask import (
     Flask,
     render_template,
     jsonify,
-    request,
-    redirect)
+)
 
 #################################################
 # Flask Setup

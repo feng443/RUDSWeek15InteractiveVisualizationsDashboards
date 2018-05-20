@@ -10,6 +10,7 @@
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Belly Button Biodiversity</title>
 </head>
 <body>
@@ -28,10 +29,10 @@
                 <select id="selDataset" onchange="optionChanged(this.value)"></select>
             </div>
 
-<table class="'metadata-table">
+<table id="'metadata-table">
     <thead>
     <tr>
-        <th>Sample MetaData</th>
+        <th id="metadata-header">Sample MetaData</th>
     </tr>
     </thead>
     <tbody>
@@ -54,6 +55,7 @@
 <div id="pie"></div>
         </div>
         <div class="col-lg-4">
+            <span id="gauge-title">Belly Button Washing Frequency</span>
 <div id="gauge"></div>
 
     </div>
