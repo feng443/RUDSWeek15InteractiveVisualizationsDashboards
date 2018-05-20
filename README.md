@@ -1,20 +1,17 @@
 # Belly Button Biodiversity
 Rutgers Data Science Bootcamp - Week 15 Interactive Visualization and Dashboard
 
-
+## Heroku App URL:
+https://belly-button-chan.herokuapp.com/
 
 ## Test Before Deployment (Windoows)
 
-
 ```bash
-
 condo create -n belley_env python=36
 activate belley_env
 
 set FLASK_APP=app.py
 flask run 
-
-
 ```
 
 ### Deploy to Heroku
@@ -29,12 +26,4 @@ heroku git:remote -a belly-button-chan
 git push heroku master
 
 ```
-
-#### Test on Heroku App
-
-https://belly-button-chan.herokuapp.com/
-
-## Files
-
-
 
