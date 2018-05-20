@@ -200,7 +200,7 @@ function buildGaugePlot(sample, init) {
             hoverinfo: 'none',
             hole: .5,
             type: 'pie',
-            showlegend: false
+            showlegend: false,
         }];
 
         var layout = {
@@ -227,13 +227,13 @@ function buildGaugePlot(sample, init) {
             xaxis: {
                 zeroline:false,
                 showticklabels:false,
-                range: [-1, 1]},
                 showgrid: false,
+                range: [-1, 1]},
             yaxis: {
                 zeroline:false,
                 showticklabels:false,
-                range: [-1, 1]},
                 showgrid: false,
+                range: [-1, 1]},
         };
 
         Plotly.newPlot('gauge', data, layout);
