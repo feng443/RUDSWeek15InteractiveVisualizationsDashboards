@@ -228,7 +228,7 @@ function buildGaugePlot(sample, init) {
                 zeroline:false,
                 showticklabels:false,
                 range: [-1, 1]},
-                showgid: false,
+                showgrid: false,
             yaxis: {
                 zeroline:false,
                 showticklabels:false,
